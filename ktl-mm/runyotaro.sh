@@ -1,0 +1,12 @@
+ python3 ./transformers/examples/pytorch/language-modeling/run_clm.py \
+  --model_name_or_path=rinna/japanese-gpt2-medium \
+  --train_file x-yotaro-train.json \
+  --do_train \
+  --num_train_epochs=3 \
+  --save_steps=10000 \
+  --block_size 512 \
+  --save_total_limit=3 \
+  --per_device_train_batch_size=1 \
+  --output_dir=output/ \
+  --overwrite_output_dir \
+  --use_fast_tokenizer=False
